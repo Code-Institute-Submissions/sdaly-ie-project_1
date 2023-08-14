@@ -1,0 +1,150 @@
+/*  This element sets the base layout, ensuring that the full height of the viewport is utilized by the page. 
+Removing default browser margins for the purpose of consistent styling across browsers */
+html, body {
+    height: 100%;
+    margin: 0;
+}
+
+/* Element fixed header styling, positioned at the top of the viewport. Spanning the full width of the screen. 
+   With header that stays above other content via reasonably high z-index score */
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: #fafafa;
+    z-index: 20;
+}
+
+/* Element converts h1 & h2 text to upper case lettering applying a very dark shade of grey */
+h1, h2 {
+    text-transform: uppercase;
+    letter-spacing: 4px;
+    color: #252525;
+}
+
+/* Identifier adds space above the feature section, centers the text horizontally and makes 
+the text twice as big as the default size */
+#feature {
+    margin-top: 150px;
+    text-align: center;
+    font-size: 200%;
+}
+
+#logo {
+    float: left;
+    font-size: 250%;
+    margin: 10px;
+    padding: 20px;
+    line-height: 75px;
+}
+
+/* Positioning of Footer icons horizontally across webpage */
+.social {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    background-color: #fafafa;
+    margin: 10px;
+    padding: 20px;
+}
+
+/* Whichs font awesome icons colour to black */
+.social a {
+    color: black;
+}
+
+/* When cursor points icon it turns blue */
+.social a:hover i {
+    color: blue;
+}
+
+
+/* navigation links */
+
+#menu {
+    display: flex;
+    flex-wrap: wrap;
+    font-size: 125%;
+    letter-spacing: 4px;
+    justify-content: flex-end;
+}
+
+#menu,
+#logo {
+    margin: auto;
+    padding: 20px;
+    line-height: 75px;
+}
+
+#menu li {
+    list-style-type: none;
+    margin-right: 30px;
+}
+
+#menu a {
+    text-decoration: none;
+    color: inherit;
+}
+
+#menu a:hover {
+    border-bottom: 1px solid #3a3a3a;
+}
+
+.active {
+    border-bottom: 1px solid #3a3a3a;
+}
+
+blockquote h3, blockquote footer {
+    padding: 15px;
+    margin: 15px;
+    font-style: italic;
+    text-align: center;
+    color: #404040;
+    white-space: normal;
+}
+
+/* Styles for mobile views */
+@media (min-width: 280px) and (max-width: 480px) {
+
+/* In the header section its the large, prominent image displayed on a webpage suitable for mobile screens */    .hero {
+        top: 25px;
+        background-image: url("../images/avro-night-small.jpg");
+        background-size: cover;
+        height: auto;
+        width: 100%;
+        position: relative;
+        background-repeat: no-repeat;
+    }
+}
+
+
+/* Styles for tablet views */
+@media (min-width: 481px) and (max-width: 1024px) {
+
+    /* In the header section its the large, prominent image displayed on a webpage suitable for tablet screens */   
+    .hero {
+        top: 50px;
+        background-image: url("../images/avro-night-medium.jpg");
+        background-size: cover;
+        height: auto;
+        width: 100%;
+        position: relative;
+        background-repeat: no-repeat;
+    }
+}
+
+/* Styles for large desktop monitors */
+@media (min-width: 1025px) {
+
+    /* In the header section its the large, prominent image displayed on a webpage suitable for desktop screensizes */
+    .hero {
+        top: 100px;
+        background-image: url("../images/avro-night-large.jpg");
+        background-size: cover;
+        height: 400px;
+        width: 100%;
+        position: relative;
+        background-repeat: no-repeat;
+    }
+}
