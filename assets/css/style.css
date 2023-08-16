@@ -1,42 +1,87 @@
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Serif:ital,wght@1,600&family=Open+Sans&display=swap');
+
 /*  This element sets the base layout, ensuring that the full height of the viewport is utilized by the page. 
 Removing default browser margins for the purpose of consistent styling across browsers */
-html, body {
-    height: 100%;
-    margin: 0;
+body {
+    font-family: 'Open Sans', Arial, sans-serif;
 }
 
-/* Element fixed header styling, positioned at the top of the viewport. Spanning the full width of the screen. 
-   With header that stays above other content via reasonably high z-index score */
 header {
     position: fixed;
     top: 0;
     left: 0;
     width: 100%;
     background-color: #fafafa;
-    z-index: 20;
+    /* Keeps header above other page content */
+    z-index: 100;
 }
 
-/* Element converts h1 & h2 text to upper case lettering applying a very dark shade of grey */
 h1, h2 {
-    text-transform: uppercase;
+        text-transform: uppercase;
+        letter-spacing: 4px;
+        color: #252525;
+    }
+
+p {
+        line-height: 2;
+}
+
+#logo {
+    float: left;
+    font-size: 150%;
+    margin: 10px;
+    padding: 20px;
+    line-height: 75px;
+}
+
+/* navigation links */
+
+#menu {
+    display: flex;
+    flex-wrap: wrap;
+    font-size: 75%;
     letter-spacing: 4px;
-    color: #252525;
+    justify-content: flex-end;
+}
+
+#menu, #logo {
+    margin: auto;
+    padding: 20px;
+    line-height: 75px;
+}
+
+#menu li {
+
+    list-style-type: none;
+    margin-right: 30px;
+}
+
+#menu a {
+    text-decoration: none;
+    color: inherit;
+}
+
+#menu a:hover {
+    border-bottom: 1px solid #3a3a3a;
+}
+
+.active {
+    border-bottom: 1px solid #3a3a3a;
 }
 
 /* Identifier adds space above the feature section, centers the text horizontally and makes 
 the text twice as big as the default size */
 #feature {
-    margin-top: 150px;
+    margin-top: 85px;
     text-align: center;
-    font-size: 200%;
+    font-size: 110%;
 }
 
-#logo {
-    float: left;
-    font-size: 250%;
-    margin: 10px;
-    padding: 20px;
-    line-height: 75px;
+blockquote {
+    font-style: italic;
+    text-align: center;
+    color: #404040;
+    white-space: normal;
 }
 
 /* Positioning of Footer icons horizontally across webpage */
@@ -59,92 +104,58 @@ the text twice as big as the default size */
     color: blue;
 }
 
-
-/* navigation links */
-
-#menu {
-    display: flex;
-    flex-wrap: wrap;
-    font-size: 125%;
-    letter-spacing: 4px;
-    justify-content: flex-end;
-}
-
-#menu,
-#logo {
-    margin: auto;
-    padding: 20px;
-    line-height: 75px;
-}
-
-#menu li {
-    list-style-type: none;
-    margin-right: 30px;
-}
-
-#menu a {
-    text-decoration: none;
-    color: inherit;
-}
-
-#menu a:hover {
-    border-bottom: 1px solid #3a3a3a;
-}
-
-.active {
-    border-bottom: 1px solid #3a3a3a;
-}
-
-blockquote h3, blockquote footer {
-    padding: 15px;
-    margin: 15px;
-    font-style: italic;
-    text-align: center;
-    color: #404040;
-    white-space: normal;
-}
-
-/* Styles for mobile views */
+/* Responsive for mobile device view */
 @media (min-width: 280px) and (max-width: 480px) {
-
-/* In the header section its the large, prominent image displayed on a webpage suitable for mobile screens */    .hero {
-        top: 25px;
+   
+    .hero {
+        top: 60px;
+        height: 250px;
+        width: 100%;
         background-image: url("../images/avro-night-small.jpg");
-        background-size: cover;
-        height: auto;
-        width: 100%;
-        position: relative;
         background-repeat: no-repeat;
+        background-size: cover;
+        position: relative;
     }
 }
 
-
-/* Styles for tablet views */
-@media (min-width: 481px) and (max-width: 1024px) {
-
-    /* In the header section its the large, prominent image displayed on a webpage suitable for tablet screens */   
+/* Responsive for iPad and Tablet views */
+@media (min-width: 481px) and (max-width: 1200px) {
+    
     .hero {
-        top: 50px;
-        background-image: url("../images/avro-night-medium.jpg");
-        background-size: cover;
-        height: auto;
+        top: 60px;
+        height: 275px;
         width: 100%;
-        position: relative;
+        background-image: url("../images/avro-night-small.jpg");
         background-repeat: no-repeat;
+        background-size: cover;
+        position: relative;
     }
 }
 
-/* Styles for large desktop monitors */
-@media (min-width: 1025px) {
-
-    /* In the header section its the large, prominent image displayed on a webpage suitable for desktop screensizes */
+/* Responsive for Laptop view */
+@media (min-width: 1201px) and (max-width: 1600px) {
+    
     .hero {
-        top: 100px;
+        top: 60px;
+        height: 350px;
+        width: 100%;
         background-image: url("../images/avro-night-large.jpg");
-        background-size: cover;
-        height: 400px;
-        width: 100%;
-        position: relative;
         background-repeat: no-repeat;
+        background-size: cover;
+        position: relative;
+    }
+}
+
+/* Responsive for desktop view */
+@media (min-width: 1601px) {
+    
+    .hero {
+        top: 60px;
+        height: 525px;
+        width: 100%;
+        background-image: url("../images/avro-night-large.jpg");
+        background-repeat: no-repeat;
+        background-size: cover;
+        position: relative;
     }
 }
