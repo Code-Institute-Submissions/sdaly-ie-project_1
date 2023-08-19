@@ -1,80 +1,97 @@
 @import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Serif:ital,wght@1,600&family=Open+Sans&display=swap');
 
-/*  This element sets the base layout, ensuring that the full height of the viewport is utilized by the page. 
-Removing default browser margins for the purpose of consistent styling across browsers */
+/* navigation links */
+
+header {  
+        height: auto;
+        display: flex;
+        justify-content: center;
+}
+
 body {
     font-family: 'Open Sans', Arial, sans-serif;
 }
 
-header {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    background-color: #fafafa;
-    /* Keeps header above other page content */
-    z-index: 100;
-}
-
-h1, h2 {
-        text-transform: uppercase;
-        letter-spacing: 4px;
-        color: #252525;
-    }
-
-p {
-        line-height: 2;
-}
-
-#logo {
-    float: left;
-    font-size: 150%;
-    margin: 10px;
-    padding: 20px;
-    line-height: 75px;
-}
-
-/* navigation links */
-
-#menu {
+#container {
     display: flex;
-    flex-wrap: wrap;
-    font-size: 75%;
-    letter-spacing: 4px;
+    align-items: center;
+    justify-content: center;
+}
+
+.menu {
+    display: flex;
     justify-content: flex-end;
+    align-items: center;
+    transition: 0.5s;
+    z-index: 1000;
 }
 
-#menu, #logo {
-    margin: auto;
-    padding: 20px;
-    line-height: 75px;
-}
-
-#menu li {
-
+.menu li {
     list-style-type: none;
-    margin-right: 30px;
 }
 
-#menu a {
+.menu li a {
+    color: #000000;
     text-decoration: none;
-    color: inherit;
+    display: flex;
+    padding: 40px 25px;
+    transition: 0.3s;
 }
 
-#menu a:hover {
-    border-bottom: 1px solid #3a3a3a;
+.menu li a:hover {
+    box-shadow: 0 -5px 0px #000000 inset,
+        100px 0 0 rgba(0, 0, 0, 0) inset;
+    padding: 15px 5px 25px 5px;
 }
 
-.active {
-    border-bottom: 1px solid #3a3a3a;
+.hamburger {
+    position: relative;
+    width: 20px;
+    height: 4px;
+    background: #000000;
+    border-radius: 5px;
+    cursor: pointer;
+    z-index: 1;
+    transition: 0.3s;
 }
 
-/* Identifier adds space above the feature section, centers the text horizontally and makes 
-the text twice as big as the default size */
-#feature {
-    margin-top: 85px;
-    text-align: center;
-    font-size: 110%;
+.hamburger:before,
+.hamburger:after {
+    content: "";
+    position: absolute;
+    height: 4px;
+    top: 0;
+    background: #000000;
+    border-radius: 10px;
+    transition: 0.3s;
+}
+
+.hamburger:before {
+    top: -10px;
+    width: 20px;
+}
+
+.hamburger:after {
+    top: 10px;
+    width: 20px;
+}
+
+.toggle-menu {
+    position: absolute;
+    width: 30px;
+    z-index: 2;
+    cursor: pointer;
+    opacity: 0;
+}
+
+.hamburger,
+.toggle-menu {
+    display: none;
+}
+
+.navigation input:checked~.menu {
+    top: 25px;
+    right: 0;
 }
 
 blockquote {
@@ -90,8 +107,8 @@ blockquote {
     flex-direction: row;
     justify-content: space-evenly;
     background-color: #fafafa;
-    margin: 10px;
-    padding: 20px;
+    margin: 5px;
+    padding: 10px;
 }
 
 /* Whichs font awesome icons colour to black */
@@ -105,53 +122,45 @@ blockquote {
 }
 
 /* Responsive for mobile device view */
-@media (min-width: 280px) and (max-width: 480px) {
+@media (max-width: 992px) {
    
+.hamburger, .toggle-menu {
+        display: inline-block;
+        position: right;
+    }
+
+    .menu {
+        justify-content: start;
+        flex-direction: column;
+        align-items: center;
+        position: fixed;
+        top: 10px;
+        right: -250px;
+        background: #fafafa;
+    }
+
+    .menu li a,
+    .menu li a:hover {
+        background-color: #fafafa;
+    }
+
     .hero {
-        top: 60px;
+        top: 25px;
         height: 250px;
         width: 100%;
         background-image: url("../images/avro-night-small.jpg");
         background-repeat: no-repeat;
         background-size: cover;
         position: relative;
-    }
-}
 
-/* Responsive for iPad and Tablet views */
-@media (min-width: 481px) and (max-width: 1200px) {
-    
-    .hero {
-        top: 60px;
-        height: 275px;
-        width: 100%;
-        background-image: url("../images/avro-night-small.jpg");
-        background-repeat: no-repeat;
-        background-size: cover;
-        position: relative;
     }
 }
 
 /* Responsive for Laptop view */
-@media (min-width: 1201px) and (max-width: 1600px) {
+@media (min-width: 993px) {
     
     .hero {
-        top: 60px;
-        height: 350px;
-        width: 100%;
-        background-image: url("../images/avro-night-large.jpg");
-        background-repeat: no-repeat;
-        background-size: cover;
-        position: relative;
-    }
-}
-
-/* Responsive for desktop view */
-@media (min-width: 1601px) {
-    
-    .hero {
-        top: 60px;
-        height: 525px;
+        height: 250px;
         width: 100%;
         background-image: url("../images/avro-night-large.jpg");
         background-repeat: no-repeat;
