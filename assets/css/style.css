@@ -269,7 +269,7 @@ blockquote {
         top: 25px;
         height: 250px;
         width: auto;
-        background-image: url("images/avro-night-small.jpg");
+        background-image: url("assets/images/avro-night-small.jpg");
         background-repeat: no-repeat;
         background-size: cover;
         position: relative;
@@ -297,7 +297,7 @@ iframe {
 }
 
 .envelope {
-    background-image: url("images/envelope.jpg");
+    background-image: url("assets/images/envelope.jpg");
     background-repeat: no-repeat;
     background-position: 50% 50%;
     background-size: auto;
@@ -309,14 +309,14 @@ iframe {
     .hero {
         height: 250px;
         width: 100%;
-        background-image: url("images/avro-night-large.jpg");
+        background-image: url("assets/images/avro-night-large.jpg");
         background-repeat: no-repeat;
         background-size: cover;
         position: relative;
     }
 
  .envelope {
-    background-image: url("images/envelope.jpg");
+    background-image: url("assets/images/envelope.jpg");
     background-repeat: no-repeat;
     background-position: 50% 50%;
     background-size: auto; 
