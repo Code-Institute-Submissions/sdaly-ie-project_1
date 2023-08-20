@@ -1,21 +1,108 @@
 @import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Serif:ital,wght@1,600&family=Open+Sans&display=swap');
 
-/* navigation links */
-
-header {  
-        height: auto;
-        display: flex;
-        justify-content: center;
+html,
+body {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    width: 100%;
+    font-family: 'Open Sans', Arial, sans-serif;
+    line-height: 2;
 }
 
-body {
-    font-family: 'Open Sans', Arial, sans-serif;
+header {
+    height: auto;
+    display: flex;
+    justify-content: center;
+}
+
+h1 {
+    font-size: 35px;
+    text-transform: uppercase;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-style: italic;
+    text-align: center;
+}
+
+h2 {
+    text-align: center;
+}
+
+#width {
+    width: 50%;
+}
+
+.centered-div {
+    position: absolute;
+    display: flex;
+    top: 75%;
+    right: 75%;
+    height: auto;
+    width: auto;
+    transform: translate(-25%, -25%);
 }
 
 #container {
     display: flex;
     align-items: center;
     justify-content: center;
+}
+
+p {
+    padding-left: 40px;
+    padding-right: 40px;
+    margin: 0 15px 15px 0;
+    text-align: justify;
+}
+
+ol {
+    text-align: justify;
+}
+
+.evolution {
+    padding: 0 15px 15px 0;
+    margin: 0 15px 15px 0;
+    grid-template-columns: 1;
+    grid-template-rows: 1;
+    justify-content: justify;
+}
+
+.profile {
+    display: grid;
+    gap: 3rem;
+    grid-template-columns: 1.5fr 1.5fr;
+    grid-template-rows: 1.5fr 1.5fr;
+}
+
+
+#spec {
+    padding: 0 15px 15px 0;
+    margin: 0 15px 15px 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    grid-column: span 1;
+    text-align: justify;
+}
+
+.note {
+    padding: 0 15px 15px 0;
+    margin: 0 15px 15px 0;
+    width: auto;
+    grid-column: span 2;
+    text-align: justify;
+}
+
+figure {
+    padding: 35px;
+    margin: 35x;
+}
+
+.responsive-image {
+    max-width: 100%;
+    height: auto;
 }
 
 .menu {
@@ -101,6 +188,7 @@ blockquote {
     white-space: normal;
 }
 
+
 /* Positioning of Footer icons horizontally across webpage */
 .social {
     display: flex;
@@ -122,9 +210,29 @@ blockquote {
 }
 
 /* Responsive for mobile device view */
-@media (max-width: 992px) {
-   
-.hamburger, .toggle-menu {
+@media (max-width: 994px) {
+
+.profile {
+        display: block;
+        justify-content: center;
+        gap: 3rem;
+        }
+
+.note {
+        width: auto;
+        grid-column: none;
+    }
+
+.fig {
+    visibility: hidden;
+}
+
+.responsive-image {
+     display: none;
+    }
+
+    .hamburger,
+    .toggle-menu {
         display: inline-block;
         position: right;
     }
@@ -147,7 +255,7 @@ blockquote {
     .hero {
         top: 25px;
         height: 250px;
-        width: 100%;
+        width: auto;
         background-image: url("../images/avro-night-small.jpg");
         background-repeat: no-repeat;
         background-size: cover;
@@ -158,7 +266,7 @@ blockquote {
 
 /* Responsive for Laptop view */
 @media (min-width: 993px) {
-    
+
     .hero {
         height: 250px;
         width: 100%;
