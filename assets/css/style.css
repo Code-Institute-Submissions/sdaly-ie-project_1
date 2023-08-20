@@ -296,6 +296,13 @@ iframe {
     align-items: stretch;
 }
 
+.envelope {
+    background-image: url("../images/envelope.jpg");
+    background-repeat: no-repeat;
+    background-position: 50% 50%;
+    background-size: auto;
+}
+
 /* Responsive for Laptop view */
 @media (min-width: 993px) {
 
@@ -307,4 +314,12 @@ iframe {
         background-size: cover;
         position: relative;
     }
+
+ .envelope {
+    background-image: url("../images/envelope.jpg");
+    background-repeat: no-repeat;
+    background-position: 50% 50%;
+    background-size: auto; 
+    }
+
 }
