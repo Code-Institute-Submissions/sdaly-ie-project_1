@@ -1,21 +1,28 @@
-@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Serif:ital,wght@1,600&family=Open+Sans&display=swap');
+/* Importing custom fonts from Google fonts for styling webpage text */
+@import url("https://fonts.googleapis.com/css2?family=IBM+Plex+Serif:ital,wght@1,600&family=Open+Sans&display=swap");
 
+/* Resetting default browser margin and padding for the 
+entire webpage and setting base font style */
 html,
 body {
     margin: 0;
     padding: 0;
     height: 100%;
     width: 100%;
-    font-family: 'Open Sans', Arial, sans-serif;
+    font-family: "Open Sans", Arial, sans-serif;
     line-height: 2;
 }
 
+/* Styling for the header section. Using flexbox 
+for center alignment */
 header {
     height: auto;
     display: flex;
     justify-content: center;
 }
 
+/* Heading 1 style, making it uppercase, italic and 
+centering it using flexbox */
 h1 {
     font-size: 35px;
     text-transform: uppercase;
@@ -26,14 +33,18 @@ h1 {
     text-align: center;
 }
 
+/* Heading 2 style, centered */
 h2 {
     text-align: center;
 }
 
+/* An ID  to set its width to 50% */
 #width {
     width: 50%;
 }
 
+/* Class for a div that's centered both vertically 
+and horizontally, even when the parent is not centered */
 .centered-div {
     position: absolute;
     display: flex;
@@ -44,12 +55,16 @@ h2 {
     transform: translate(-25%, -25%);
 }
 
+/* A container for content, that centers its children 
+both horizontally and vertically using flexbox */
 #container {
     display: flex;
     align-items: center;
     justify-content: center;
 }
 
+/* Custom padding and margin for a specific paragraph, 
+with text justified */
 #para {
     padding-left: 40px;
     padding-right: 40px;
@@ -57,10 +72,14 @@ h2 {
     text-align: justify;
 }
 
+/* Ordered list text justification */
 ol {
     text-align: justify;
 }
 
+/* This class styles an element with a grid layout, 
+adds padding on its right and bottom sides, and gives it 
+a margin on the right and bottom. */
 .evolution {
     padding: 0 15px 15px 0;
     margin: 0 15px 15px 0;
@@ -69,6 +88,7 @@ ol {
     justify-content: justify;
 }
 
+/* Grid layout where items are laid out in 2x2. table */
 .profile {
     display: grid;
     gap: 3rem;
@@ -76,7 +96,7 @@ ol {
     grid-template-rows: 1.5fr 1.5fr;
 }
 
-
+/* Styling for a specific part within a grid */
 #spec {
     padding: 15px 15px 15px 15px;
     margin: 15px 15px 15px 15px;
@@ -87,6 +107,8 @@ ol {
     text-align: justify;
 }
 
+/* A note section within the grid that spans 2 columns. 
+Justified text. */
 .note {
     padding: 0 15px 15px 0;
     margin: 0 15px 15px 0;
@@ -95,15 +117,18 @@ ol {
     text-align: justify;
 }
 
+/* Styling for image captions */
 figure {
     padding: 35px;
     margin: 35x;
 }
 
+/* Image scales and adjusts its size according to the parent's width */
 .responsive-image {
     max-width: 100%;
     height: auto;
 }
+
 
 .menu {
     display: flex;
@@ -126,8 +151,7 @@ figure {
 }
 
 .menu li a:hover {
-    box-shadow: 0 -5px 0px #000000 inset,
-        100px 0 0 rgba(0, 0, 0, 0) inset;
+    box-shadow: 0 -5px 0px #000000 inset, 100px 0 0 rgba(0, 0, 0, 0) inset;
     padding: 15px 5px 25px 5px;
 }
 
@@ -224,7 +248,6 @@ blockquote {
 
 /* Responsive for mobile device view */
 @media (max-width: 994px) {
-
     .profile {
         display: block;
         justify-content: center;
@@ -236,8 +259,10 @@ blockquote {
         grid-column: none;
     }
 
-    .fig {
-        visibility: hidden;
+    .section-figure {
+        display: none;
+        position: absolute;
+        transform: scale(0);
     }
 
     .responsive-image {
@@ -273,7 +298,6 @@ blockquote {
         background-repeat: no-repeat;
         background-size: cover;
         position: relative;
-
     }
 }
 
@@ -305,7 +329,6 @@ iframe {
 
 /* Responsive for Laptop view */
 @media (min-width: 993px) {
-
     .hero {
         height: 250px;
         width: 100%;
@@ -315,11 +338,10 @@ iframe {
         position: relative;
     }
 
- .envelope {
-    background-image: url("../images/envelope.jpg");
-    background-repeat: no-repeat;
-    background-position: 50% 50%;
-    background-size: auto; 
+    .envelope {
+        background-image: url("../images/envelope.jpg");
+        background-repeat: no-repeat;
+        background-position: 50% 50%;
+        background-size: auto;
     }
-
 }
