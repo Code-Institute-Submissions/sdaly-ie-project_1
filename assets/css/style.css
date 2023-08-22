@@ -249,6 +249,26 @@ blockquote {
     color: blue;
 }
 
+.iframe-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+    border: none;
+}
+
+iframe {
+    width: 100%;
+    height: 100%;
+    min-height: 200px;
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+}
+
+.bold-text {
+    font-weight: bold;
+}
+
 /* Responsive for mobile device view */
 @media (max-width: 994px) {
     .profile {
@@ -266,10 +286,6 @@ blockquote {
         display: none;
         position: absolute;
         transform: scale(0);
-    }
-
-    .responsive-image {
-        display: none;
     }
 
     .hamburger,
@@ -301,33 +317,17 @@ blockquote {
         background-size: cover;
         position: relative;
     }
+
+    .envelope {
+        background-image: url("../images/envelope.jpg");
+        background-repeat: no-repeat;
+        width: auto;
+        position: relative;
+        background-size: cover;
+        background-position: 50% 50%;
+    }
 }
 
-.iframe-container {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 20px;
-    border: none;
-}
-
-iframe {
-    width: 100%;
-    height: 100%;
-    min-height: 200px;
-    /* Adjust based on your preference */
-
-    /* Flexbox settings for responsiveness */
-    display: flex;
-    flex-direction: column;
-    align-items: stretch;
-}
-
-.envelope {
-    background-image: url("../images/envelope.jpg");
-    background-repeat: no-repeat;
-    background-position: 50% 50%;
-    background-size: auto;
-}
 
 /* Responsive for Laptop view */
 @media (min-width: 993px) {
