@@ -38,6 +38,11 @@ h2 {
     text-align: center;
 }
 
+strong.break-after::after {
+    content: "\A";
+    white-space: pre;
+}
+
 /* An ID  to set its width to 50% */
 #width {
     width: 50%;
@@ -57,7 +62,7 @@ and horizontally, even when the parent is not centered */
 
 /* A container for content, that centers its children 
 both horizontally and vertically using flexbox */
-#container {
+.container {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -85,7 +90,7 @@ a margin on the right and bottom. */
     margin: 0 15px 15px 0;
     grid-template-columns: 1fr;
     grid-template-rows: 1fr;
-    justify-content: space-evenly;
+    /*justify-content: justify;*/
 }
 
 /* Grid layout where items are laid out in 2x2. table */
@@ -97,7 +102,7 @@ a margin on the right and bottom. */
 }
 
 /* Styling for a specific part within a grid */
-#spec {
+.spec {
     padding: 15px 15px 15px 15px;
     margin: 15px 15px 15px 15px;
     display: flex;
@@ -129,7 +134,6 @@ figure {
     height: auto;
 }
 
-/* Menu layout */
 .menu {
     display: flex;
     justify-content: flex-end;
@@ -138,12 +142,10 @@ figure {
     z-index: 1000;
 }
 
-/* Menu item styling. Removes bullet points. */
 .menu li {
     list-style-type: none;
 }
 
-/* Color, styling and positioning of links in menu */
 .menu li a {
     color: #000000;
     text-decoration: none;
@@ -152,13 +154,11 @@ figure {
     transition: 0.3s;
 }
 
-/* Style for links in menu with hover effects for better interactivity */
 .menu li a:hover {
     box-shadow: 0 -5px 0px #000000 inset, 100px 0 0 rgba(0, 0, 0, 0) inset;
     padding: 15px 5px 25px 5px;
 }
 
-/* Hamburger icon styling */
 .hamburger {
     position: relative;
     width: 20px;
@@ -170,8 +170,6 @@ figure {
     transition: 0.3s;
 }
 
-/* Creates two horizontal bars (above and below) for the hamburger menu icon 
-with a smooth transition effect. */
 .hamburger:before,
 .hamburger:after {
     content: "";
@@ -183,21 +181,16 @@ with a smooth transition effect. */
     transition: 0.3s;
 }
 
-/* Positions the top bar of the hamburger icon 10px above its center 
-and sets its width to 20px. */
 .hamburger:before {
     top: -10px;
     width: 20px;
 }
 
-/* Positions the bottom bar of the hamburger icon 10px below its center 
-and sets its width to 20px. */
 .hamburger:after {
     top: 10px;
     width: 20px;
 }
 
-/* Positioning and setup for toggling the menu */
 .toggle-menu {
     position: absolute;
     width: 30px;
@@ -206,19 +199,16 @@ and sets its width to 20px. */
     opacity: 0;
 }
 
-/* Displaying the hamburger icon and toggle on mobile */
 .hamburger,
 .toggle-menu {
     display: none;
 }
 
-/* Changes the positioning of the menu when the input is checked */
 .navigation input:checked~.menu {
     top: 25px;
     right: 0;
 }
 
-/* Styling of blockquotes text for citation */
 blockquote {
     font-style: italic;
     text-align: center;
@@ -226,7 +216,6 @@ blockquote {
     white-space: normal;
 }
 
-/* Applying vertical oval shape to profile picture */
 .photo {
     width: auto;
     height: auto;
@@ -234,14 +223,13 @@ blockquote {
     object-fit: cover;
 }
 
-/* Justified text with specific padding and margin.*/
 .text-justified {
     padding: 15px;
     margin: 15px;
     text-align: justify;
 }
 
-/* Positioning of Footer icons horizontally across webpage with white background */
+/* Positioning of Footer icons horizontally across webpage */
 .social {
     display: flex;
     flex-direction: row;
@@ -251,98 +239,44 @@ blockquote {
     padding: 10px;
 }
 
-/* Turns fontawesome icons colour to black */
+/* Whichs font awesome icons colour to black */
 .social a {
     color: black;
 }
 
-/* When cursor points on icon it turns blue */
+/* When cursor points icon it turns blue */
 .social a:hover i {
     color: blue;
 }
 
-/* Grid layout for iframes, perhaps for video or other media content */
-.iframe-container {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 20px;
-}
-
-/* Iframe styling to ensure it fits its container and is flexible in size */
-iframe {
-    width: 100%;
-    height: 100%;
-    min-height: 200px;
-    display: flex;
-    flex-direction: column;
-    align-items: stretch;
-}
-
-/* Responsive design positioning of background image */
-.envelope {
-    background-image: url("../images/envelope.jpg");
-    background-repeat: no-repeat;
-    background-position: 50% 50%;
-    background-size: auto;
-}
-
-/* Responsive design for Laptop/larger screen view */
-@media (min-width: 993px) {
-
-    /* Responsive design deployment of larger background image */
-    .hero {
-        height: 250px;
-        width: 100%;
-        background-image: url("../images/avro-night-large.jpg");
-        background-repeat: no-repeat;
-        background-size: cover;
-        position: relative;
-    }
-}
-
-/* Responsive for mobile device/smaller screen view */
+/* Responsive for mobile device view */
 @media (max-width: 994px) {
-
-    /* Sets the profile section to a block layout, centers its content, 
-    and adds spacing of 3rem between items. */
     .profile {
         display: block;
         justify-content: center;
         gap: 3rem;
     }
 
-    /* Sets the note's width to adjust automatically and removes 
-    any specific grid column placement. */
     .note {
         width: auto;
         grid-column: none;
     }
 
-    /* Hides the section-figure and positions it absolutely, 
-    while setting its size to zero using a scale transform. */
     .section-figure {
         display: none;
         position: absolute;
         transform: scale(0);
     }
 
-    /* Hides imge without impacting layout. */
     .responsive-image {
         display: none;
     }
 
-    /* Positions both the hamburger icon and toggle-menu at the top-right, 
-    displaying them inline within the layout. */
     .hamburger,
     .toggle-menu {
         display: inline-block;
-        position: absolute;
-        right: 0;
     }
 
-    /* Styles the menu as a fixed columnar list centered on its main axis, 
-        positioned 10px from the top and hidden 250px to the right of the 
-        viewport, with a white background. */
     .menu {
         justify-content: start;
         flex-direction: column;
@@ -353,14 +287,11 @@ iframe {
         background: #fafafa;
     }
 
-    /* Applies a white background color to menu links, 
-    both in their default state and when hovered over. */
     .menu li a,
     .menu li a:hover {
         background-color: #fafafa;
     }
 
-    /* Responsive design deployment of larger background image */
     .hero {
         top: 25px;
         height: 250px;
@@ -369,5 +300,50 @@ iframe {
         background-repeat: no-repeat;
         background-size: cover;
         position: relative;
+    }
+}
+
+.iframe-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+    border: none;
+}
+
+iframe {
+    width: 100%;
+    height: 100%;
+    min-height: 200px;
+    /* Adjust based on your preference */
+
+    /* Flexbox settings for responsiveness */
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+}
+
+.envelope {
+    background-image: url("../images/envelope.jpg");
+    background-repeat: no-repeat;
+    background-position: 50% 50%;
+    background-size: auto;
+}
+
+/* Responsive for Laptop view */
+@media (min-width: 993px) {
+    .hero {
+        height: 250px;
+        width: 100%;
+        background-image: url("../images/avro-night-large.jpg");
+        background-repeat: no-repeat;
+        background-size: cover;
+        position: relative;
+    }
+
+    .envelope {
+        background-image: url("../images/envelope.jpg");
+        background-repeat: no-repeat;
+        background-position: 50% 50%;
+        background-size: auto;
     }
 }
