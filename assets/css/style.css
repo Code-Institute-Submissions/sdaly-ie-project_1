@@ -90,7 +90,6 @@ a margin on the right and bottom. */
     margin: 0 15px 15px 0;
     grid-template-columns: 1fr;
     grid-template-rows: 1fr;
-    /*justify-content: justify;*/
 }
 
 /* Grid layout where items are laid out in 2x2. table */

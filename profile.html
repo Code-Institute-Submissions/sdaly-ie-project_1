@@ -2,9 +2,9 @@
 <html lang="en">
 
 <head>
+    <!-- Standard meta data for viewport, plus meta data site description and keywords for SEO -->
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="description" content="Aviation History: World War 2 Special on Avro Lancaster">
     <meta name="keywords" content="world war II, world war 2, britain, planes, aviation, raf, avro, lancaster">
@@ -13,37 +13,38 @@
     <link rel="stylesheet" type="text/css" href="assets/css/style.css">
 
     <!-- Site tab Title -->
-    <title>Aviation History</title>
+    <title>Aviation History: Profile</title>
 
     <!-- Insert icon to webpage tab - Ref. RAF roundel - Source is royality free from Vector Stock -->
     <link rel="icon" type="image/gif" href="assets/images/raf-roundel.gif">
 </head>
 
 <body>
-    <!-- Header -->
+    <!-- Page Header -->
     <header>
-        <!--Naigvation menu-->
+
+        <!-- Naigvation menu -->
         <nav class="navigation">
             <input type="checkbox" class="toggle-menu" id="menuToggle">
             <label for="menuToggle"><span class="hamburger"></span></label>
-
             <ul class="menu">
+                <!-- Homepage link -->
                 <li>
                     <a href="index.html">Home</a>
                 </li>
-                <!-- Aircraft Profile -->
+                <!-- Aircraft Profile link -->
                 <li>
                     <a href="profile.html">Profile</a>
                 </li>
-                <!-- Famous Designer and Aircrew Profile, Video, VR and Audio -->
+                <!-- Famous stories link -->
                 <li>
                     <a href="stories.html">Stories</a>
                 </li>
-                <!-- External link to memorial site -->
+                <!-- External link to Memorial site that opens on separate tab -->
                 <li>
                     <a href="https://www.rafbf.org/bomber-command-memorial" target="_blank">Memorial</a>
                 </li>
-                <!-- Subscribe for more stories -->
+                <!-- Subscribion link -->
                 <li>
                     <a href="subscribe.html">Subscribe</a>
                 </li>
@@ -51,12 +52,12 @@
         </nav>
     </header>
 
-    <!-- Main Content -->
+    <!-- Main Content of Page -->
     <main>
         <!-- Background image -->
         <div class="hero"></div>
 
-        <!-- Aircraft Profile text -->
+        <!-- Introduction section to Aircraft Profile text -->
         <section>
             <br>
             <h1>Aviation History</h1>
@@ -68,6 +69,7 @@
             <div>
                 <h2>Evolution</h2>
             </div>
+            <!-- Paragraph element with class that justified text-->
             <p class="text-justified">
                 The evolution of the Avro Lancaster was triggered by the operational
                 and mechanical shortcomings of its predecessor, the Manchester,
@@ -75,9 +77,15 @@
                 heavy bomber. The Lancaster quickly proved its worth and became one of
                 the most iconic bombers of World War II.
             </p>
+            <!-- Div element whose class applies padding and margin to its right and bottom sides, 
+                 sets its grid layout to have one column and one row, 
+                 each taking up the full available space -->
             <div class="evolution">
+                <!-- Ordered list -->
                 <ol>
                     <li>
+                        <!-- Strong element with a class that adds a newline after its content, 
+                            effectively breaking the content that follows onto a new line -->
                         <strong class="break-after">Engine Issues with the Manchester:</strong>
                         The Avro Manchester was powered by the Rolls-Royce Vulture
                         engines, which proved to be unreliable in service. These engines
@@ -136,10 +144,14 @@
                     </li>
                 </ol>
             </div>
-
+            <!-- h3 element with a class that applies uniform padding and margin, 
+                sets the element to use a flexible box layout with its content 
+                centered both vertically and horizontally, spans one grid column, 
+                and justifies the text content.-->
             <h3 class="spec">Specification <i class="fa-solid fa-gears"></i></h3>
-
             <div class="spec text-justified">
+                <!-- Table within a Div element using rows of headers and 
+                    corresponding details to structure content -->
                 <table>
                     <tr>
                         <th scope="col">Name:</th>
@@ -215,8 +227,11 @@
             <h3 class="container">
                 <strong>Notable Features <i class="fa-solid fa-wrench"></i></strong>
             </h3>
-    
+            <!-- Div element that applies padding and margin to its right and bottom sides, 
+                sets its width to adjust automatically, spans two grid columns, 
+                and justifies the text content. -->
             <div class="note text-justified">
+                <!-- Unordered list -->
                 <ul>
                     <li>
                         <strong>Bouncing Bombs:</strong>
@@ -255,7 +270,10 @@
                     </li>
                 </ul>
             </div>
-
+            <!-- Div elemtn that contains a class that uses a flexible box layout and centers 
+                its content both vertically and horizontally. 
+                In addition a class that hides the element, positions it absolutely, 
+                and scales its size to zero dependent on screen size -->
             <div class="container section-figure">
                 <figure class="fig">
                     <figcaption>
@@ -271,6 +289,7 @@
             </div>
         </section>
 
+        <!-- Bibliography section -->
         <section>
             <h3 class="container"><strong>Bibliography</strong></h3>
             <div class="container">
@@ -317,7 +336,7 @@
         <br>
     </main>
 
-    <!-- Footer -->
+    <!-- Page Footer -->
     <footer>
         <!-- div element with class for positioning and hover feature -->
         <div class="social">
