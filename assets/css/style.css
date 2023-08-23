@@ -33,17 +33,18 @@ h1 {
     text-align: center;
 }
 
-/* Heading 2 style, centered */
+/* H2 element centered */
 h2 {
     text-align: center;
 }
 
+/* Inserts a line break */
 strong.break-after::after {
     content: "\A";
     white-space: pre;
 }
 
-/* An ID  to set its width to 50% */
+/* An ID  sets width to 50% */
 #width {
     width: 50%;
 }
@@ -82,9 +83,8 @@ ol {
     text-align: justify;
 }
 
-/* This class styles an element with a grid layout, 
-adds padding on its right and bottom sides, and gives it 
-a margin on the right and bottom. */
+/* Styles elements with the class "evolution" to have specific padding,
+margin and a single-column grid layout */
 .evolution {
     padding: 0 15px 15px 0;
     margin: 0 15px 15px 0;
@@ -100,7 +100,8 @@ a margin on the right and bottom. */
     grid-template-rows: 1.5fr 1.5fr;
 }
 
-/* Styling for a specific part within a grid */
+/* To style to have specific padding and margin. It centers its content both 
+horizontally and vertically within a flexible container, while justifying text */
 .spec {
     padding: 15px 15px 15px 15px;
     margin: 15px 15px 15px 15px;
@@ -111,8 +112,8 @@ a margin on the right and bottom. */
     text-align: justify;
 }
 
-/* A note section within the grid that spans 2 columns. 
-Justified text. */
+/* T0 style elements to have specific padding and margin. Which adjusts 
+its width while spanning two columns in a grid layout and justifys text */
 .note {
     padding: 0 15px 15px 0;
     margin: 0 15px 15px 0;
@@ -121,7 +122,7 @@ Justified text. */
     text-align: justify;
 }
 
-/* Styling for image captions */
+/* Styling for image captions with specific padding and margin settings */
 figure {
     padding: 35px;
     margin: 35px;
@@ -133,6 +134,9 @@ figure {
     height: auto;
 }
 
+/* Arrange menu content horizontally, aligning it to the right,
+centers it vertically positioned above most other elements with
+a half-second transition effect applied */
 .menu {
     display: flex;
     justify-content: flex-end;
@@ -141,10 +145,13 @@ figure {
     z-index: 1000;
 }
 
+/* Removes bullet points from list items */
 .menu li {
     list-style-type: none;
 }
 
+/* Styles links within list items of "menu" to be black without underlines,
+spaced apart and includes a 0.3 second transition effect when changes occur */
 .menu li a {
     color: #000000;
     text-decoration: none;
@@ -153,11 +160,15 @@ figure {
     transition: 0.3s;
 }
 
+/* Adds a shadow effect to links within the list items of "menu" 
+when hovered over and adjusts their padding. */
 .menu li a:hover {
     box-shadow: 0 -5px 0px #000000 inset, 100px 0 0 rgba(0, 0, 0, 0) inset;
     padding: 15px 5px 25px 5px;
 }
 
+/* To look like a small, black horizontal bar that can be clicked,
+with rounded edges and a 0.3 second transition effect when changes occur */
 .hamburger {
     position: relative;
     width: 20px;
@@ -169,6 +180,8 @@ figure {
     transition: 0.3s;
 }
 
+/* Adds two black horizontal bars above and below an element with the class "hamburger",
+both with rounded edges and a 0.3 second transition effect when changes occur */
 .hamburger:before,
 .hamburger:after {
     content: "";
@@ -180,16 +193,22 @@ figure {
     transition: 0.3s;
 }
 
+/* Positions the top bar of the "hamburger" element minus 10 pixels 
+above it and sets its width to 20 pixels */
 .hamburger:before {
     top: -10px;
     width: 20px;
 }
 
+/* Positions the bottom bar of the "hamburger" element 10 pixels 
+below it and sets its width to 20 pixels */
 .hamburger:after {
     top: 10px;
     width: 20px;
 }
 
+/* Creates transparent clickable area placed over other content,
+with a width of 30 pixels */
 .toggle-menu {
     position: absolute;
     width: 30px;
@@ -198,16 +217,23 @@ figure {
     opacity: 0;
 }
 
+/* hides elements with the class "hamburger" or 
+"toggle-menu" from view */
 .hamburger,
 .toggle-menu {
     display: none;
 }
 
+/* When an input within the "navigation" class is checked,
+the adjacent "menu" class element is positioned 25 pixels 
+from the top and aligned to the right */
 .navigation input:checked~.menu {
     top: 25px;
     right: 0;
 }
 
+/* To display text in italic, centered,
+with a gray color and allowing line breaks as usual */
 blockquote {
     font-style: italic;
     text-align: center;
@@ -215,6 +241,8 @@ blockquote {
     white-space: normal;
 }
 
+/* To have oval shape with profile image and 
+cover space without distortion. */
 .photo {
     width: auto;
     height: auto;
@@ -222,6 +250,7 @@ blockquote {
     object-fit: cover;
 }
 
+/* Specific padding and margin with text content justified */
 .text-justified {
     padding: 15px;
     margin: 15px;
@@ -238,16 +267,19 @@ blockquote {
     padding: 10px;
 }
 
-/* Whichs font awesome icons colour to black */
+/* Turns fontawesome icons colour to black */
 .social a {
     color: black;
 }
 
-/* When cursor points icon it turns blue */
+/* When cursor points over icon it turns color blue */
 .social a:hover i {
     color: blue;
 }
 
+/* Displays content in a grid layout with columns that automatically adjust 
+in width, have a minimum width of 300px, and a gap of 20px between items, 
+without any borders */
 .iframe-container {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
@@ -255,6 +287,8 @@ blockquote {
     border: none;
 }
 
+/* Fills container's width and height, with a minimum height set, 
+and align content vertically, stretching it to fit the available space */
 iframe {
     width: 100%;
     height: 100%;
@@ -264,34 +298,47 @@ iframe {
     align-items: stretch;
 }
 
+/* Sets text to bold */
 .bold-text {
     font-weight: bold;
 }
 
 /* Responsive for mobile device view */
 @media (max-width: 994px) {
+    
+    /* For smaller screens it will stack vertically,
+    center their content, with a gap between items*/
     .profile {
         display: block;
         justify-content: center;
         gap: 3rem;
     }
 
+    /* For smaller screens it will adjust to their container's 
+    width and won't span specific grid columns.  */
     .note {
         width: auto;
         grid-column: none;
     }
 
+    /* For smaller screens it hides an element and positions it out of 
+    the normal flow, making it non-visible via scaling it down to zero in size */
     .section-figure {
         display: none;
         position: absolute;
         transform: scale(0);
     }
 
+    /* For smaller screens elements with the class "hamburger" or "toggle-menu" 
+    will be displayed inline with other content */ 
     .hamburger,
     .toggle-menu {
         display: inline-block;
     }
 
+    /* For smaller screens "menu" will stack its content vertically,
+     align it to the center, positioned 10px from the top and 250px 
+     outside the right edge of the screen with a light gray background */
     .menu {
         justify-content: start;
         flex-direction: column;
@@ -302,11 +349,17 @@ iframe {
         background: #fafafa;
     }
 
+    /* For smaller screens the menu links listed will turn light gray 
+    when hovered over by the cursor */
     .menu li a,
     .menu li a:hover {
         background-color: #fafafa;
     }
 
+    /* For smaller screens positions smaller background image 25px 
+    from the top, with height of 250px, width adjust to the container,
+    with background image covering area but not repeating,
+    while keeping its original positioning within the content flow */
     .hero {
         top: 25px;
         height: 250px;
@@ -317,6 +370,9 @@ iframe {
         position: relative;
     }
 
+    /* For smaller screens displays background image that covers 
+    the entire area without repeating, adjusts its width to the container,
+    retains its position in the content flow and centers the background image */
     .envelope {
         background-image: url("../images/envelope.jpg");
         background-repeat: no-repeat;
@@ -330,6 +386,10 @@ iframe {
 
 /* Responsive for Laptop view */
 @media (min-width: 993px) {
+    
+    /* For larger screens it has has height set, span the full width of its container,
+        displaying a larger background image that covers the entire area 
+        without repeating and retains its position in the content flow */
     .hero {
         height: 250px;
         width: 100%;
@@ -339,6 +399,8 @@ iframe {
         position: relative;
     }
 
+    /* For larger screens displays background image without repeating and 
+    centers the background image, while maintaining its original size */
     .envelope {
         background-image: url("../images/envelope.jpg");
         background-repeat: no-repeat;
